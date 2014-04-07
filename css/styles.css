@@ -145,6 +145,83 @@ body {
     margin-bottom: 20px;
 }
 
+#dislike p:hover{
+	transform: translateY(10%);
+	animation: bounce 2s infinite;
+
+	-webkit-transform: translateY(10%);
+	-webkit-animation: bounce 2s infinite;
+}
+
+#like p:hover{
+	transform: translateY(-10%);
+	animation: bounce 2s infinite;
+
+	-webkit-transform: translateY(-10%);
+	-webkit-animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+	0% {
+		transform: translateY(-25%);
+	}
+
+	5% {
+		transform: translateY(-25%);
+	}
+
+	15% {
+		transform: translateY(0%);
+	}
+
+	30% {
+		transform: translateY(-15%);
+	}
+
+	40% {
+		transform: translateY(0%);
+	}
+
+	50% {
+		transform: translateY(-15%);
+	}
+
+	60% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: translateY(-25%);
+	}
+
+	5% {
+		-webkit-transform: translateY(-25%);
+	}
+
+	15% {
+		-webkit-transform: translateY(0%);
+	}
+
+	30% {
+		-webkit-transform: translateY(-15%);
+	}
+
+	40% {
+		-webkit-transform: translateY(0%);
+	}
+
+	50% {
+		-webkit-transform: translateY(-15%);
+	}
+
+	60% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
 /* media select stuff */
 
 #mediaSelectContainer {
