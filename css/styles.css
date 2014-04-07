@@ -343,3 +343,8 @@ body {
 	padding-bottom: 10px;
 	cursor: pointer;
 }
+
+#searchText {
+	font-weight: 500;
+	opacity: 0.6;
+}
