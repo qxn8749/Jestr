@@ -145,7 +145,7 @@ body {
     margin-bottom: 20px;
 }
 
-#dislike p:hover{
+#dislike:hover p{
 	transform: translateY(10%);
 	animation: bounce 2s infinite;
 
@@ -153,7 +153,7 @@ body {
 	-webkit-animation: bounce 2s infinite;
 }
 
-#like p:hover{
+#like:hover p{
 	transform: translateY(-10%);
 	animation: bounce 2s infinite;
 
