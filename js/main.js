@@ -1,3 +1,6 @@
+var FADE_ANIMATION_MS = 200;
+var SHOW_CHOICE_ANIMATION_MS = 100;
+
 function showChoice(selector) {
     $(selector).addClass('show');
     $(selector).parent().addClass('show');
@@ -19,17 +22,66 @@ function showChoices() {
         }
 
         count++;
-    }, 100);
+    }, SHOW_CHOICE_ANIMATION_MS);
 }
 
-function hideMediaSelect(showSuggestion) {
-    showSuggestion = (typeof(showSuggestion) == 'undefined') ? true : false;
+function hideMediaSelect(displaySearch) {
+    displaySearch = (typeof(displaySearch) == 'undefined') ? true : false;
 
     $('#mediaSelectContainer').animate(
         {
             opacity: 0
         },
-        200,
+        FADE_ANIMATION_MS,
+        function() {
+            $(this).hide();
+
+            if (displaySearch) {
+                showSearch();
+            }
+        }
+    );
+}
+
+function showMediaSelect() {
+    $('#mediaSelectContainer').show();
+    $('#mediaSelectContainer').animate(
+        {
+            opacity: 1
+        },
+        FADE_ANIMATION_MS
+    );
+}
+
+function showSuggestions() {
+    $('#suggestionContainer').show();
+    $('#suggestionContainer').animate(
+        {
+            opacity: 1
+        }, FADE_ANIMATION_MS
+    );
+}
+
+function hideSuggestions() {
+    $('#suggestionContainer').animate(
+        {
+            opacity: 0
+        },
+        FADE_ANIMATION_MS,
+        function() {
+            $(this).hide();
+        }
+    );
+}
+
+function hideSearch(showSuggestion) {
+    showSuggestion = (typeof(showSuggestion) == 'undefined') ? true : false;
+
+    $('#searchContainer').animate(
+        {
+            opacity: 0
+        },
+        FADE_ANIMATION_MS,
         function() {
             $(this).hide();
 
@@ -40,12 +92,13 @@ function hideMediaSelect(showSuggestion) {
     );
 }
 
-function showSuggestions() {
-    $('#suggestionContainer').show();
-    $('#suggestionContainer').animate(
+function showSearch() {
+    $('#searchContainer').show();
+    $('#searchContainer').animate(
         {
             opacity: 1
-        }, 200
+        },
+        FADE_ANIMATION_MS
     );
 }
 
@@ -74,6 +127,16 @@ $(document).ready(function() {
             $('#moreInfo').removeClass('show');
         } else {
             $('#moreInfo').addClass('show');
+        }
+    });
+
+    $('#searchButton').click(function() {
+        hideSearch();
+    });
+
+    $('#search').keydown(function (e){
+        if(e.keyCode == 13){
+            hideSearch();
         }
     });
 });
