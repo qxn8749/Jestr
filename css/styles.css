@@ -159,11 +159,11 @@ body {
 
 @keyframes bounceUp {
 	20% {
-		-webkit-tranform: translateY(25%);
+		transform: translateY(25%);
 	}
 
 	40% {
-		-webkit-transform: translateY(-25%);
+		transform: translateY(-25%);
 	}
 }
 
@@ -180,11 +180,11 @@ body {
 
 @keyframes bounceDown {
 	20% {
-		-webkit-tranform: translateY(-25%);
+		transform: translateY(-25%);
 	}
 
 	40% {
-		-webkit-transform: translateY(25%);
+		transform: translateY(25%);
 	}
 }
 
