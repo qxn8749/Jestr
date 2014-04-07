@@ -146,79 +146,55 @@ body {
 }
 
 #dislike:hover p{
-	transform: translateY(10%);
-	animation: bounce 2s infinite;
+	animation: bounceDown 2s infinite;
 
-	-webkit-transform: translateY(10%);
-	-webkit-animation: bounce 2s infinite;
+	-webkit-animation: bounceDown 2s infinite;
 }
 
 #like:hover p{
-	transform: translateY(-10%);
-	animation: bounce 2s infinite;
+	animation: bounceUp 2s infinite;
 
-	-webkit-transform: translateY(-10%);
-	-webkit-animation: bounce 2s infinite;
+	-webkit-animation: bounceUp 2s infinite;
 }
 
-
-@keyframes bounce {
-	0% {
-		transform: translateY(-25%);
-	}
-
-	5% {
-		transform: translateY(-25%);
-	}
-
-	15% {
-		transform: translateY(0%);
-	}
-
-	30% {
-		transform: translateY(-15%);
+@keyframes bounceUp {
+	20% {
+		-webkit-tranform: translateY(25%);
 	}
 
 	40% {
-		transform: translateY(0%);
-	}
-
-	50% {
-		transform: translateY(-15%);
-	}
-
-	60% {
-		transform: translateY(0%);
+		-webkit-transform: translateY(-25%);
 	}
 }
 
-@-webkit-keyframes bounce {
-	0% {
-		-webkit-transform: translateY(-25%);
-	}
-
-	5% {
-		-webkit-transform: translateY(-25%);
-	}
-
-	15% {
-		-webkit-transform: translateY(0%);
-	}
-
-	30% {
-		-webkit-transform: translateY(-15%);
+@-webkit-keyframes bounceUp {
+	20% {
+		-webkit-tranform: translateY(25%);
 	}
 
 	40% {
-		-webkit-transform: translateY(0%);
+		-webkit-transform: translateY(-25%);
+	}
+}
+
+
+@keyframes bounceDown {
+	20% {
+		-webkit-tranform: translateY(-25%);
 	}
 
-	50% {
-		-webkit-transform: translateY(-15%);
+	40% {
+		-webkit-transform: translateY(25%);
+	}
+}
+
+@-webkit-keyframes bounceDown {
+	20% {
+		-webkit-tranform: translateY(-25%);
 	}
 
-	60% {
-		-webkit-transform: translateY(0%);
+	40% {
+		-webkit-transform: translateY(25%);
 	}
 }
 
