@@ -8,35 +8,63 @@ function showChoice(selector) {
 function showChoices() {
     var count = 0;
     var intervalId = setInterval(function() {
-        if (count == 0) {
+        if (count === 0) {
             showChoice('.games');
         } else if (count == 1) {
             showChoice('.movies');
         } else if (count == 2) {
             showChoice('.books');
-            
+
             clearInterval(intervalId);
         }
-        
+
         count++;
     }, 100);
 }
 
+function hideMediaSelect(showSuggestion) {
+    showSuggestion = (typeof(showSuggestion) == 'undefined') ? true : false;
+
+    $('#mediaSelectContainer').animate(
+        {
+            opacity: 0
+        },
+        200,
+        function() {
+            $(this).hide();
+
+            if (showSuggestion) {
+                showSuggestions();
+            }
+        }
+    );
+}
+
+function showSuggestions() {
+    $('#suggestionContainer').show();
+    $('#suggestionContainer').animate(
+        {
+            opacity: 1
+        }, 200
+    );
+}
+
 $(document).ready(function() {
     showChoices();
-    
+
     $('.mediaSelectInner').click(function() {
         var thisDiv = $(this);
         thisDiv.addClass('shrink');
         thisDiv.parent().addClass('shrink');
         thisDiv.parent().find('.mediaSelectIcon').addClass('shrink');
         thisDiv.parent().find('.mediaSelectName').addClass('shrink');
-        
+
         var shrinkIntervalId = setInterval(function() {
             thisDiv.removeClass('shrink');
             thisDiv.parent().removeClass('shrink');
             thisDiv.parent().find('.mediaSelectIcon').removeClass('shrink');
             thisDiv.parent().find('.mediaSelectName').removeClass('shrink');
+            hideMediaSelect();
             clearInterval(shrinkIntervalId);
         }, 50);
     });

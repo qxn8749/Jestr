@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #f6f9fa;
+    background-color: #9fbdd3;
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 300;
 }
@@ -47,6 +47,9 @@ body {
     width: 632px;
     margin-left: auto;
     margin-right: auto;
+	margin-top: 45px;
+	display: none;
+	opacity: 0;
 }
 
 #dislike, #like {
@@ -102,7 +105,7 @@ body {
 #moreInfoButton {
     height: 40px;
     width: 100%;
-    background-color: #cccccc;
+    background-color: #e8e1cf;
     text-align: center;
     cursor: pointer;
 }
@@ -121,7 +124,7 @@ body {
     max-height: 0;
     overflow-y: hidden;
     font-size: 1.15em;
-    
+
     transition-property: all;
 	transition-duration: 0.5s;
 }
@@ -165,8 +168,8 @@ body {
     height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
-    cursor: pointer;
-    
+    cursor: pointer;;
+
     transition-property: all;
     transition-duration: 0.5s;
 }
@@ -174,7 +177,7 @@ body {
 .mediaSelectWrapper.show {
     padding-top: 0px;
     padding-bottom: 0px;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
@@ -182,7 +185,7 @@ body {
 .mediaSelectWrapper.shrink {
     padding-top: 10px;
     padding-bottom: 10px;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
@@ -193,7 +196,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
-    
+
     transition-property: all;
 	transition-duration: 0.5s;
 }
@@ -201,14 +204,14 @@ body {
 .mediaSelectInner.show {
     opacity: 1;
     width: 100%;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
 
 .mediaSelectInner.shrink {
     width: 95%;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
@@ -216,19 +219,19 @@ body {
 .mediaSelectIcon {
     float: left;
     font-family: icons;
-    
+
     padding-left: 15px;
     padding-right: 15px;
-    
+
     text-align: center;
     height: 100%;
-    
+
     width: 56px;
-    
+
     opacity: 0;
     padding-top: 5px;
     font-size: 1.5em;
-    
+
     transition-property: all;
     transition-duration: 0.5s;
 }
@@ -238,7 +241,7 @@ body {
     font-size: 2.5em;
     width: 73px;
     opacity: 0.5;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
@@ -247,7 +250,7 @@ body {
     padding-top: 5px;
     font-size: 1.5em;
     width: 56px;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
@@ -257,11 +260,11 @@ body {
     font-weight: 500;
     margin: 0;
     margin-right: 15px;
-    
+
     opacity: 0;
     padding-top: 5px;
     font-size: 1em;
-    
+
     transition-property: all;
     transition-duration: 0.5s;
 }
@@ -270,7 +273,7 @@ body {
     padding-top: 10px;
     font-size: 2em;
     opacity: 0.6;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
@@ -278,7 +281,7 @@ body {
 .mediaSelectName.shrink {
     padding-top: 5px;
     font-size: 1.25em;
-    
+
     transition-property: all;
     transition-duration: 0.15s;
 }
