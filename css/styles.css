@@ -206,6 +206,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
+	border-radius: 10px;
 }
 
 .question {
@@ -340,10 +341,12 @@ html, body {
 
 .games {
     background-color: #25d970;
+	border-radius: 10px 10px 0px 0px;
 }
 
 .games div.mediaSelectIcon {
     background-color: #22a75a;
+	border-radius: 10px 0px 0px 0px;
 }
 
 .movies {
@@ -356,10 +359,12 @@ html, body {
 
 .books {
     background-color: #459aeb;
+	border-radius: 0px 0px 10px 10px;
 }
 
 .books div.mediaSelectIcon {
     background-color: #2973b8;
+	border-radius: 0px 0px 0px 10px;
 }
 
 /* search stuff */
@@ -373,6 +378,7 @@ html, body {
 	opacity: 0;
 	background-color: #ececec;
 	padding: 30px;
+	border-radius: 10px;
 }
 
 #searchWrapper {
@@ -383,6 +389,10 @@ html, body {
 	width: 100%;
 	height: 50px;
 	font-size: 2em;
+	border-radius: 10px;
+	border: 1px solid lightgray;
+	-webkit-appearance: none;
+	padding: 0px 5px;
 }
 
 #searchButton {
@@ -394,6 +404,7 @@ html, body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	cursor: pointer;
+	border-radius: 10px;
 }
 
 #searchText {
