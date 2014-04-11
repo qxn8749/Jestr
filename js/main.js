@@ -158,9 +158,17 @@ $(document).ready(function() {
 
     $('.front').hover(
         function() {
+            if (flipped) {
+                flipped = false;
+            }
+
             $(this).parent().addClass('frontPeek');
         },
         function() {
+            if (flipped) {
+                flipped = false;
+            }
+
             $(this).parent().removeClass('frontPeek');
         }
     );
