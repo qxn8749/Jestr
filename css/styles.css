@@ -53,8 +53,8 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 	margin-top: 45px;
-/*	display: none;
-	opacity: 0;*/
+	display: none;
+	opacity: 0;
 }
 
 #dislike, #like {
@@ -201,8 +201,6 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-
-	display: none;
 }
 
 .question {

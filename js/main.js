@@ -55,6 +55,7 @@ function showMediaSelect() {
 
 function showSuggestions() {
     $('#suggestionContainer').show();
+    $('.back').height($('.front').height());
     $('#suggestionContainer').animate(
         {
             opacity: 1
