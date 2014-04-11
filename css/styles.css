@@ -145,55 +145,55 @@ html, body {
 }
 
 #dislike:hover p {
-	animation: bounceDown 2s infinite;
+	animation: bounceDown 1s infinite;
 
-	-webkit-animation: bounceDown 2s infinite;
+	-webkit-animation: bounceDown 1s infinite;
 }
 
 #like:hover p {
-	animation: bounceUp 2s infinite;
+	animation: bounceUp 1s infinite;
 
-	-webkit-animation: bounceUp 2s infinite;
+	-webkit-animation: bounceUp 1s infinite;
 }
 
 @keyframes bounceUp {
 	20% {
-		transform: translateY(25%);
+		transform: translateY(10%);
 	}
 
 	40% {
-		transform: translateY(-25%);
+		transform: translateY(-10%);
 	}
 }
 
 @-webkit-keyframes bounceUp {
 	20% {
-		-webkit-tranform: translateY(25%);
+		-webkit-tranform: translateY(10%);
 	}
 
 	40% {
-		-webkit-transform: translateY(-25%);
+		-webkit-transform: translateY(-10%);
 	}
 }
 
 
 @keyframes bounceDown {
 	20% {
-		transform: translateY(-25%);
+		transform: translateY(-10%);
 	}
 
 	40% {
-		transform: translateY(25%);
+		transform: translateY(10%);
 	}
 }
 
 @-webkit-keyframes bounceDown {
 	20% {
-		-webkit-tranform: translateY(-25%);
+		-webkit-tranform: translateY(-10%);
 	}
 
 	40% {
-		-webkit-transform: translateY(25%);
+		-webkit-transform: translateY(10%);
 	}
 }
 
