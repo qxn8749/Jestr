@@ -122,14 +122,6 @@ $(document).ready(function() {
         }, 50);
     });
 
-    $('#moreInfoButton').click(function() {
-        if ($('#moreInfo').hasClass('show')) {
-            $('#moreInfo').removeClass('show');
-        } else {
-            $('#moreInfo').addClass('show');
-        }
-    });
-
     $('#searchButton').click(function() {
         hideSearch();
     });
@@ -138,5 +130,15 @@ $(document).ready(function() {
         if(e.keyCode == 13){
             hideSearch();
         }
+    });
+
+    $('.back').height($('.front').height());
+
+    $(window).resize(function() {
+        $('.back').height($('.front').height());
+    });
+
+    $('.flip-container .flipper').click(function() {
+        $(this).toggleClass('flip');
     });
 });
