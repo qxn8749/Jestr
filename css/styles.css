@@ -58,13 +58,13 @@ html, body {
 }
 
 #dislike, #like {
-    width: 126px;
-    height: 300px;
+    width: 125px;
+    height: 125px;
+	border-radius: 50%;
     font-family: icons;
     font-size: 3em;
     text-align: center;
-    padding-top: 120px;
-	margin-top: 20px;
+	margin-top: 100px;
     cursor: pointer;
 }
 
@@ -91,6 +91,7 @@ html, body {
 #dislike {
     background-color: #e74c3c;
 	float: left;
+	padding-top: 42px;
 }
 
 #suggestionWrapper {
@@ -105,6 +106,7 @@ html, body {
 
 #suggestion img {
 	width: 100%;
+	border-radius: 10px;
 }
 
 .suggestionText {
@@ -121,6 +123,8 @@ html, body {
 	margin: 0;
 	padding: 0 15px;
 	color: #f7f7f7;
+
+	border-radius: 0px 0px 10px 10px;
 }
 
 .moreInfoTextInner {
@@ -137,6 +141,7 @@ html, body {
 #like {
     background-color: #2ecc71;
 	float: right;
+	padding-top: 37px;
 }
 
 #dislike:hover p {
@@ -449,6 +454,7 @@ html, body {
 .back {
 	background-color: #ececec;
 	padding: 0 15px;
+	border-radius: 10px;
 
 	transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
