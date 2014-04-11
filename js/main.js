@@ -139,7 +139,50 @@ $(document).ready(function() {
         $('.back').height($('.front').height());
     });
 
+    var flipped = false;
+
     $('.flip-container .flipper').click(function() {
-        $(this).toggleClass('flip');
+        if ($(this).hasClass('flip')) {
+            $(this).removeClass('flip');
+        } else if (!$(this).hasClass('flip') && $(this).hasClass('backPeek')) {
+            $(this).removeClass('backPeek');
+        } else if (!$(this).hasClass('flip')) {
+            $(this).addClass('flip');
+        }
+
+        $(this).removeClass('frontPeek');
+        $(this).removeClass('backPeek');
+
+        flipped = true;
     });
+
+    $('.front').hover(
+        function() {
+            $(this).parent().addClass('frontPeek');
+        },
+        function() {
+            $(this).parent().removeClass('frontPeek');
+        }
+    );
+
+    $('.back').hover(
+        function() {
+            if (flipped) {
+                flipped = false;
+                return;
+            }
+
+            $(this).parent().removeClass('flip');
+            $(this).parent().addClass('backPeek');
+        },
+        function() {
+            if (flipped) {
+                flipped = false;
+                return;
+            }
+
+            $(this).parent().removeClass('backPeek');
+            $(this).parent().addClass('flip');
+        }
+    );
 });

@@ -402,6 +402,16 @@ html, body {
 	-webkit-perspective: 1000;
 }
 
+.frontPeek {
+	transform: rotateY(10deg);
+	-webkit-transform: rotateY(10deg);
+}
+
+.backPeek {
+	transform: rotateY(170deg);
+	-webkit-transform: rotateY(170deg);
+}
+
 .flip {
 	transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
