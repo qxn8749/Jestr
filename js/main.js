@@ -186,6 +186,24 @@ function unsetCardFlipsAndHovers() {
     $('.front').unbind();
 }
 
+function shrinkSearch() {
+    var searchButtonDiv = $('#searchButton');
+
+    searchButtonDiv.addClass('shrink');
+    searchButtonDiv.parent().addClass('shrink');
+    searchButtonDiv.find('#searchText').addClass('shrink');
+
+    var shrinkIntervalId = setInterval(function() {
+        searchButtonDiv.removeClass('shrink');
+        searchButtonDiv.parent().removeClass('shrink');
+        searchButtonDiv.find('#searchText').removeClass('shrink');
+
+        hideSearch();
+
+        clearInterval(shrinkIntervalId);
+    }, 50);
+}
+
 $(document).ready(function() {
     showChoices();
 
@@ -194,7 +212,7 @@ $(document).ready(function() {
     });
 
     $('#searchButton').click(function() {
-        hideSearch();
+        shrinkSearch();
     });
 
     $('#search').keydown(function (e){
