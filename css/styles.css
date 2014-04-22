@@ -37,6 +37,58 @@ html, body {
     height:100%;
 }
 
+nav {
+	background-color: #346f87;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+nav ul {
+	margin: 15px 0px;
+	padding-left: 15px;
+}
+
+nav ul li {
+	display: inline-block;
+	cursor: pointer;
+	float: left;
+	margin-right: 40px;
+}
+
+nav ul li:not(:first-child) {
+	font-size: 1.5em;
+	margin-top: 10px;
+}
+
+nav ul li:not(:first-child) a {
+	color: #ececec;
+	text-decoration: none;
+}
+
+nav ul li:not(:first-child) a:hover {
+	color: #2ecc71;
+}
+
+#logo:hover {
+	animation: spin 3s infinite;
+
+	-webkit-animation: spin 3s infinite;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotateZ(360deg);
+	}
+}
+
 .subtleShadow {
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
@@ -52,7 +104,7 @@ html, body {
 	min-width: 738px;
     margin-left: auto;
     margin-right: auto;
-	margin-top: 80px;
+	margin-top: 125px;
 	display: none;
 	opacity: 0;
 }
@@ -157,42 +209,26 @@ html, body {
 }
 
 @keyframes bounceUp {
-	20% {
-		transform: translateY(10%);
-	}
-
-	40% {
+	50% {
 		transform: translateY(-10%);
 	}
 }
 
 @-webkit-keyframes bounceUp {
-	20% {
-		-webkit-tranform: translateY(10%);
-	}
-
-	40% {
+	50% {
 		-webkit-transform: translateY(-10%);
 	}
 }
 
 
 @keyframes bounceDown {
-	20% {
-		transform: translateY(-10%);
-	}
-
-	40% {
+	50% {
 		transform: translateY(10%);
 	}
 }
 
 @-webkit-keyframes bounceDown {
-	20% {
-		-webkit-tranform: translateY(-10%);
-	}
-
-	40% {
+	50% {
 		-webkit-transform: translateY(10%);
 	}
 }
@@ -202,7 +238,7 @@ html, body {
 #mediaSelectContainer {
     background-color: #ececec;
     width: 432px;
-    margin-top: 100px;
+    margin-top: 125px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -371,7 +407,7 @@ html, body {
 
 #searchContainer {
 	width: 432px;
-	margin-top: 100px;
+	margin-top: 125px;
 	margin-left: auto;
 	margin-right: auto;
 	display: none;
