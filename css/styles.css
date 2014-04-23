@@ -33,10 +33,6 @@ body {
     font-weight: 300;
 }
 
-html, body {
-    height:100%;
-}
-
 nav {
 	background-color: #346f87;
 	position: absolute;
