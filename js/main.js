@@ -139,8 +139,23 @@ function setCardFlipsAndHovers() {
         $(this).removeClass('backPeek');
 
         flipped = true;
+		
+		/*$(function(){
+			window.myFlux = new flux.slider('.front');
+			
+		});*/
+		
+		$('#suggestion .flipper').cycle({ 
+			fx:      'scrollLeft', 
+			next:   '.flip-container', 
+			timeout:  0, 
+			easing:  'easeInOutBack' 
+		});
+				
     });
 
+	
+		
     $('.front').hover(
         function() {
             if (flipped) {
@@ -220,6 +235,12 @@ $(document).ready(function() {
             hideSearch();
         }
     });
+	
+	$('#like').click(function() {
+			window.myFlux = new flux.slider('.front');
+
+	
+	});
 
     fixBackHeight();
 
