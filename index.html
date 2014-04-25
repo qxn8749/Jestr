@@ -7,6 +7,22 @@
 		<meta name='apple-mobile-web-app-capable' content='yes' />
 		<meta charset='utf-8' />
 		<link rel='stylesheet' href='css/styles.css' />
+		
+		<script>
+			$(document).ready(function{
+				/*$('#suggestion').cycle({ 
+				fx:      'scrollLeft', 
+				next:   '.front', 
+				timeout:  0, 
+				easing:  'easeInOutBack' 
+				});*/
+				
+				$(function(){
+					window.myFlux = new flux.slider('#suggestion');
+				});
+			});
+		</script>
+		
 	</head>
 
 	<body>
@@ -87,7 +103,8 @@
 				<div class='flip-container'>
 					<div id='suggestion' class='flipper'>
 						<div class='front'>
-							<img src='i/wilfred.jpg' class='subtleShadow' />
+							<img src='i/wilfred.jpg' class='subtleShadow' id='wilfred'/>
+							<img src='i/ironman.jpg' class='subtleShadow' />
 						    <div class='suggestionText'>
 			    			    <div class='suggestionTextInner'>
 									<p>
@@ -134,7 +151,13 @@
 		</div>
 
 		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
-		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+			
+		</script>
+		
+		
 		<script src='js/main.js'></script>
+		<script src='js/jquery.cycle.js'></script>
+		
 	</body>
 </html>
