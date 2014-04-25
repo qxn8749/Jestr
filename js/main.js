@@ -140,7 +140,6 @@ function setCardFlipsAndHovers() {
 
         flipped = true;
 		
-<<<<<<< HEAD
 		$(function(){
 			window.myFlux = new flux.slider('.front');
 			
@@ -148,23 +147,10 @@ function setCardFlipsAndHovers() {
 		
 		/*$('#suggestion .flipper').cycle({ 
 			fx:      'scrollLeft', 
-			next:   '#suggestion .flipper', 
-			timeout:  0, 
-			easing:  'easeInOutBack' 
-		});*/
-=======
-		/*$(function(){
-			window.myFlux = new flux.slider('.front');
-			
-		});*/
-		
-		$('#suggestion .flipper').cycle({ 
-			fx:      'scrollLeft', 
 			next:   '.flip-container', 
 			timeout:  0, 
 			easing:  'easeInOutBack' 
-		});
->>>>>>> 6cc886ae763bd7b576c8c5e160aec54b13974465
+		});*/
 				
     });
 
